@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AuthService } from './auth.service';
-import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './login.component.html'
@@ -11,7 +11,8 @@ export class LoginComponent {
   errorMessage: string;
   pageTitle = 'Log In';
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService,
+              private router: Router) { }
 
   login(loginForm: NgForm) {
     if (loginForm && loginForm.valid) {
