@@ -48,7 +48,8 @@
             </td>
             <td>
               <a>
-                {{ product.productName }}
+                <a [routerLink]="['/products', product.id]">{{ product.productName }}</a>
+                
               </a>
             </td>
             <td>{{ product.productCode }}</td>
@@ -60,7 +61,7 @@
             </td>
             <td>
               <button class="btn btn-outline-primary btn-sm">
-                Edit
+                <a [routerLink]="['/products', product.id, 'edit']">Edit</a>
               </button>
             </td>
           </tr>
